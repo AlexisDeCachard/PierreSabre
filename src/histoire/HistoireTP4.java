@@ -4,6 +4,7 @@ import personnages.Humain;
 import personnages.Commercant;
 import personnages.Yakuza;
 import personnages.Ronin;
+import personnages.Samourai;
 
 public class HistoireTP4 {
 	public static void main(String[] args) {
@@ -22,5 +23,9 @@ public class HistoireTP4 {
 		roro.listerConnaissance();
 		yaku.listerConnaissance();
 		yuzo.listerConnaissance();
+		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "saké", 80);
+		akimoto.faireConnaissanceAvec(marco);
+		akimoto.listerConnaissance();
+		akimoto.boire("the");
 	}
 }
