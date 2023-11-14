@@ -7,23 +7,20 @@ import personnages.Ronin;
 
 public class HistoireTP4 {
 	public static void main(String[] args) {
-		Humain prof = new Humain("Prof", "koumacha", 54);
-		prof.direBonjour();
-		prof.acheter("une boisson",12);
-		prof.boire();
-		prof.acheter("un jeu",2);
-		prof.acheter("kimono",50);
 		Commercant marco = new Commercant("Marco",20);
-		marco.direBonjour();
-		marco.seFaireExtorquer();
-		marco.recevoirArgent(15);
-		marco.boire();
-		marco.acheter("une théière",20);
+		Commercant chonin = new Commercant("Chonin", 40);
+		Commercant kumi = new Commercant("Kumi", 10);
 		Yakuza yaku = new Yakuza("Yaku le Noir","sake",30,"Warsong");
-		yaku.direBonjour();
-		yaku.extorquer(marco);
 		Ronin roro = new Ronin("Roro","shochu",60);
-		roro.donner(marco);
-		roro.provoquer(yaku);
+		Ronin yuzo =new Ronin("Yuzo", "biere", 30);
+		marco.faireConnaissanceAvec(roro);
+		marco.faireConnaissanceAvec(yaku);
+		marco.faireConnaissanceAvec(chonin);
+		marco.faireConnaissanceAvec(kumi);
+		marco.faireConnaissanceAvec(kumi);
+		marco.listerConnaissance();
+		roro.listerConnaissance();
+		yaku.listerConnaissance();
+		yuzo.listerConnaissance();
 	}
 }
